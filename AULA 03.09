@@ -1,0 +1,54 @@
+class Main {
+  public static void main(String[] args) {
+   cao c = new cao("Rex");  
+   gato g = new gato("Tom");
+
+    System.out.println("O nome do meu bicho é " + c.nome);
+    System.out.println(""); 
+    c.alimentar();
+    System.out.println("");
+    c.Barulho();
+    System.out.println("");
+    System.out.println("O nome do meu bicho é " + g.nome);
+    System.out.println("");
+    g.alimentar();
+    System.out.println("");
+    g.Barulho();
+      
+   
+  }
+}
+
+class animal {
+  String nome;
+  public animal(String nome) {
+    this.nome = nome;
+  }
+  //funçao
+  public void alimentar(){
+    System.out.println("Alimentando o " + nome);
+  }
+  public void Barulho(){
+
+  } 
+}
+class cao extends animal {
+  public cao(String nome){
+    super(nome);
+  }
+ 
+  public void Barulho(){
+    System.out.println("Au au au!");
+  }
+}
+
+
+class gato extends animal {
+  public gato(String nome){
+    super(nome);
+  }
+
+  public void Barulho(){
+    System.out.println("Miau Miau!");
+  }
+}
